@@ -9,5 +9,6 @@ os.environ['SECRET_KEY'] = "django-insecure-ztits4*i8ygp0%ou9@s)p0f(5-%g56e01$=x
 # os.environ['SECRET_KEY'] = "+I1z*`08P|2XG6H.^QaAPrA"v#0l4CN|p}^#%fHeP9r_Euf7C)`?Pm[T:1c"%6j"
 
 os.environ['DEV'] = '1'
+os.environ['DEBUG'] = '1'
 
 # os.environ['SECRET_KEY'] = "+I1z*`08P|2XG6H.^QaAPrA"v#0l4CN|p}^#%fHeP9r_Euf7C)`?Pm[T:1c"%6j"
