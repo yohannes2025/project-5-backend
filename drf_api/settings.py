@@ -84,7 +84,8 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000",
+CORS_ALLOWED_ORIGINS = ["https://project-5-productivity-backend-1b67e4c3722a.herokuapp.com/admin/",
+                        "http://localhost:3000", "http://127.0.0.1",
                         os.environ.get('CLIENT_ORIGIN'),]
 
 
