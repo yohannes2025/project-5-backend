@@ -84,8 +84,8 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [os.environ.get('CLIENT_ORIGIN'),
-                        "http://localhost:3000"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000",
+                        os.environ.get('CLIENT_ORIGIN'),]
 
 
 JWT_AUTH_COOKIE = 'my-app-auth'
@@ -161,7 +161,7 @@ else:
 
     STATIC_URL = '/static/'
     STATIC_ROOT = BASE_DIR / 'staticfiles'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     WHITENOISE_ROOT = BASE_DIR / 'staticfiles' / 'build'
 
     # Default primary key field type
