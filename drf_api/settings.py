@@ -90,9 +90,15 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1",
-                        os.environ.get('CLIENT_ORIGIN'),]
+# CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1",
+#                         os.environ.get('CLIENT_ORIGIN'),]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    os.environ.get('CLIENT_ORIGIN', '').rstrip(
+        '/'),  # ensure no trailing slash
+]
 
 JWT_AUTH_COOKIE = 'my-app-auth'
 JWT_AUTH_REFRESH_COOKIE = 'my-refresh-token'
